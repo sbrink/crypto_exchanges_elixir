@@ -4,19 +4,22 @@ defmodule CryptoExchanges.BittrexAdapter do
   alias CryptoExchanges.CryptoCurrency
 
   def coinlist do
-    get_markets_from_bittrex_api()
+    api_get_markets()
     |> get_in(["result"])
-    |> Enum.map(fn(bittrex_currency) ->
-      %CryptoCurrency{
-        active: true,
-        symbol: bittrex_currency["MarketCurrency"]
-      }
-    end)
-    |> Enum.uniq_by(fn(crypto_currency) -> crypto_currency.symbol end)
+    |> Enum.map(&transform_bittrex_currency/1)
+    |> Enum.uniq_by(&(&1.symbol))
   end
 
+  def transform_bittrex_currency(bittrex_currency) do
+    %CryptoCurrency{
+      active: true,
+      symbol: bittrex_currency["MarketCurrency"]
+    }
+  end
+
+  # Private functions
   @url "https://bittrex.com/api/v1.1/public/getmarkets"
-  def get_markets_from_bittrex_api do
+  defp api_get_markets do
     HTTPoison.get!(@url).body
     |> Poison.decode!
   end
