@@ -1,6 +1,6 @@
 defmodule CryptoExchanges.PoloniexAdapter do
   @moduledoc """
-  An Adapter for the Bittrex Exchange
+  An Adapter for the Poloniex Exchange
   """
   @behaviour CryptoExchanges.Adapter
 
