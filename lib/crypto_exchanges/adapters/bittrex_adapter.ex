@@ -1,4 +1,7 @@
 defmodule CryptoExchanges.BittrexAdapter do
+  @moduledoc """
+  An Adapter for the Bittrex Exchange
+  """
   @behaviour CryptoExchanges.Adapter
 
   alias CryptoExchanges.CryptoCurrency

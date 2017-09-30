@@ -27,9 +27,10 @@ defmodule CryptoExchanges.Mixfile do
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
+      {:credo, ">= 0.0.0", only: [:dev, :test]},
       {:exvcr, "~> 0.9", only: :test},
       {:httpoison, ">= 0.0.0"},
-      {:mix_test_watch, "~> 0.3", only: :dev},
+      {:mix_test_watch, "~> 0.3", only: :dev, runtime: false},
       {:poison, ">= 0.0.0"}
     ]
   end

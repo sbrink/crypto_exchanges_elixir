@@ -1,4 +1,7 @@
 defmodule CryptoExchanges.TestAdapter do
+  @moduledoc """
+  TestAdapter
+  """
   @behaviour CryptoExchanges.Adapter
 
   alias CryptoExchanges.CryptoCurrency
