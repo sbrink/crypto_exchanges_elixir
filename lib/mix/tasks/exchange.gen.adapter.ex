@@ -18,7 +18,8 @@ defmodule Mix.Tasks.Exchange.Gen.Adapter do
     [exchange_name] = validate_args!(args)
 
     binding = [
-      path: Macro.underscore(exchange_name)
+      path: Macro.underscore(exchange_name),
+      scoped: Macro.camelize(exchange_name)
     ]
 
     copy_templates "priv/templates/exchange.gen.adapter", binding, [
@@ -27,7 +28,7 @@ defmodule Mix.Tasks.Exchange.Gen.Adapter do
     ]
 
     Mix.shell.info """
-      Adapter generated
+      Adapter generated: #{binding[:scoped]}Adapter
     """
   end
 
