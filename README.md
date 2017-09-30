@@ -2,6 +2,12 @@
 
 **TODO: Add description**
 
+## Creating a new adapter
+
+```bash
+mix exchange.gen.adapter MyExchange
+```
+
 ## Installation
 
 If [available in Hex](https://hex.pm/docs/publish), the package can be installed
