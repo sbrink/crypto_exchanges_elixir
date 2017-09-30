@@ -29,6 +29,7 @@ defmodule CryptoExchanges.Mixfile do
     [
       {:exvcr, "~> 0.9", only: :test},
       {:httpoison, ">= 0.0.0"},
+      {:mix_test_watch, "~> 0.3", only: :dev},
       {:poison, ">= 0.0.0"}
     ]
   end
