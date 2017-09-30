@@ -1,6 +1,11 @@
 defmodule CryptoExchanges.BittrexAdapter do
   @moduledoc """
   An Adapter for the Bittrex Exchange
+
+  Homepage: https://bittrex.com/
+  API Docs: https://bittrex.com/home/api
+
+  Country: USA
   """
   @behaviour CryptoExchanges.Adapter
 

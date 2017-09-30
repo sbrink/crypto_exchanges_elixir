@@ -1,6 +1,11 @@
 defmodule CryptoExchanges.KrakenAdapter do
   @moduledoc """
   An Adapter for the Kraken Exchange
+
+  Homepage: https://www.kraken.com/
+  API Docs: https://www.kraken.com/en-us/help/api
+
+  Country: USA
   """
   @behaviour CryptoExchanges.Adapter
 
