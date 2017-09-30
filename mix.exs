@@ -7,7 +7,13 @@ defmodule CryptoExchanges.Mixfile do
       version: "0.1.0",
       elixir: "~> 1.5",
       start_permanent: Mix.env == :prod,
-      deps: deps()
+      deps: deps(),
+      preferred_cli_env: [
+        "vcr": :test,
+        "vcr.delete": :test,
+        "vcr.check": :test,
+        "vcr.show": :test
+      ],
     ]
   end
 
@@ -22,6 +28,8 @@ defmodule CryptoExchanges.Mixfile do
   defp deps do
     [
       {:exvcr, "~> 0.9", only: :test},
+      {:httpoison, ">= 0.0.0"},
+      {:poison, ">= 0.0.0"}
     ]
   end
 end
