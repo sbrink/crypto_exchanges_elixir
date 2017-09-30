@@ -13,6 +13,8 @@ defmodule Mix.Tasks.Exchange.Gen.Adapter do
   """
   use Mix.Task
 
+  alias Mix.Generator
+
   @doc false
   def run(args) do
     [exchange_name] = validate_args!(args)
@@ -51,7 +53,7 @@ defmodule Mix.Tasks.Exchange.Gen.Adapter do
   defp copy_templates(root, binding, mappings) when is_list(mappings) do
     for {source_file_path, target} <- mappings do
       source = Path.join(root, source_file_path)
-      Mix.Generator.create_file(target, EEx.eval_file(source, binding))
+      Generator.create_file(target, EEx.eval_file(source, binding))
     end
   end
 end

@@ -1,0 +1,35 @@
+[
+  {
+    "request": {
+      "body": "",
+      "headers": [],
+      "method": "get",
+      "options": [],
+      "request_body": "",
+      "url": "https://api.gdax.com/currencies"
+    },
+    "response": {
+      "body": "[{\"id\":\"BTC\",\"name\":\"Bitcoin\",\"min_size\":\"0.00000001\"},{\"id\":\"EUR\",\"name\":\"Euro\",\"min_size\":\"0.01000000\"},{\"id\":\"LTC\",\"name\":\"Litecoin\",\"min_size\":\"0.00000001\"},{\"id\":\"GBP\",\"name\":\"British Pound\",\"min_size\":\"0.01000000\"},{\"id\":\"USD\",\"name\":\"United States Dollar\",\"min_size\":\"0.01000000\"},{\"id\":\"ETH\",\"name\":\"Ether\",\"min_size\":\"0.00000001\"}]",
+      "headers": {
+        "Date": "Sat, 30 Sep 2017 17:52:01 GMT",
+        "Content-Type": "application/json; charset=utf-8",
+        "Content-Length": "340",
+        "Connection": "keep-alive",
+        "Set-Cookie": "__cfduid=d2a62ca79c192c4f4cc44db5f5baac6ba1506793921; expires=Sun, 30-Sep-18 17:52:01 GMT; path=/; domain=.gdax.com; HttpOnly",
+        "Access-Control-Allow-Headers": "Content-Type, Accept, cb-session",
+        "Access-Control-Allow-Methods": "GET,POST,DELETE,PUT",
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Expose-Headers": "cb-before, cb-after",
+        "Access-Control-Max-Age": "7200",
+        "Cache-Control": "public, max-age=30",
+        "ETag": "W/\"154-SRUc3S3ydXN2N8dnQxPT8Mt+aL0\"",
+        "Strict-Transport-Security": "max-age=15552000; includeSubDomains; preload",
+        "X-Content-Type-Options": "nosniff",
+        "Server": "cloudflare-nginx",
+        "CF-RAY": "3a690898dbba2378-FRA"
+      },
+      "status_code": 200,
+      "type": "ok"
+    }
+  }
+]
