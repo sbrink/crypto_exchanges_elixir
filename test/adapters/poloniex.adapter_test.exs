@@ -6,9 +6,9 @@ defmodule CryptoExchanges.PoloniexAdapterTest do
 
     describe "#coinlist" do
         test "get the list" do
-        use_cassette "poloniex#getmarkets" do
-            assert PoloniexAdapter.coinlist == %CryptoExchanges.CryptoCurrency{active: true, symbol: "LTC"}
-        end
+            use_cassette "poloniex#getmarkets" do
+                assert PoloniexAdapter.coinlist |> List.first == %CryptoExchanges.CryptoCurrency{active: false, symbol: "CNOTE"}
+            end
         end
     end
 end
