@@ -1,6 +1,11 @@
 defmodule CryptoExchanges.PoloniexAdapter do
   @moduledoc """
   An Adapter for the Poloniex Exchange
+
+  Homepage: https://poloniex.com/
+  API Docs: https://poloniex.com/support/api/
+
+  Country: USA
   """
   @behaviour CryptoExchanges.Adapter
 

@@ -1,6 +1,11 @@
 defmodule CryptoExchanges.HitbtcAdapter do
     @moduledoc """
     An Adapter for the Hitbtc Exchange
+
+    Homepage: https://hitbtc.com/
+    API Docs: https://hitbtc.com/api
+
+    Country: -
     """
     @behaviour CryptoExchanges.Adapter
 
