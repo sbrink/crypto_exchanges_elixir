@@ -3,10 +3,10 @@ defmodule CryptoExchanges.PoloniexAdapterTest do
 
     alias CryptoExchanges.PoloniexAdapter
 
-    describe "#coinlist" do
+    describe "#get_currencies" do
         test "get the list" do
-            use_cassette "poloniex#coinlist" do
-                assert PoloniexAdapter.coinlist |> List.first == %CryptoExchanges.CryptoCurrency{active: false, symbol: "CNOTE"}
+            use_cassette "poloniex#get_currencies" do
+                assert PoloniexAdapter.get_currencies |> List.first == %CryptoExchanges.CryptoCurrency{active: false, symbol: "CNOTE"}
             end
         end
     end

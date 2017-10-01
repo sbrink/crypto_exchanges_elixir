@@ -11,8 +11,8 @@ defmodule CryptoExchanges.GeminiAdapter do
 
   alias CryptoExchanges.CryptoCurrency
 
-  def coinlist do
-    api_coinlist()
+  def get_currencies do
+    api_get_currencies()
     |> Enum.map(&transform_gemini_currency/1)
     |> List.flatten
     |> Enum.uniq_by(&(&1.symbol))
@@ -41,7 +41,7 @@ defmodule CryptoExchanges.GeminiAdapter do
 
   # Private functions
   @url "https://api.gemini.com/v1/symbols"
-  defp api_coinlist do
+  defp api_get_currencies do
     HTTPoison.get!(@url).body
     |> Poison.decode!
   end

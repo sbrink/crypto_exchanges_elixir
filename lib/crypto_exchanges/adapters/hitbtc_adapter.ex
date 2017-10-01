@@ -11,7 +11,7 @@ defmodule CryptoExchanges.HitbtcAdapter do
 
   alias CryptoExchanges.CryptoCurrency
 
-  def coinlist do
+  def get_currencies do
     api_get_markets()
     |> get_in(["symbols"])
     |> Enum.map(&transform_hitbtc_currency/1)

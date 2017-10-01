@@ -3,9 +3,9 @@ defmodule CryptoExchanges.CoinoneAdapterTest do
 
   alias CryptoExchanges.CoinoneAdapter
 
-  describe "#coinlist" do
+  describe "#get_currencies" do
     test "get the list" do
-      assert CoinoneAdapter.coinlist() |> List.first == %CryptoExchanges.CryptoCurrency{active: true, symbol: "BTC"}
+      assert CoinoneAdapter.get_currencies() |> List.first == %CryptoExchanges.CryptoCurrency{active: true, symbol: "BTC"}
     end
   end
 end

@@ -11,8 +11,8 @@ defmodule CryptoExchanges.GdaxAdapter do
 
   alias CryptoExchanges.CryptoCurrency
 
-  def coinlist do
-    api_coinlist()
+  def get_currencies do
+    api_get_currencies()
     |> Enum.map(&transform_currency/1)
   end
 
@@ -25,7 +25,7 @@ defmodule CryptoExchanges.GdaxAdapter do
 
     # Private functions
   @url "https://api.gdax.com/currencies"
-  defp api_coinlist do
+  defp api_get_currencies do
     HTTPoison.get!(@url).body
     |> Poison.decode!
   end

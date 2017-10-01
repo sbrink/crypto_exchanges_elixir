@@ -11,7 +11,7 @@ defmodule CryptoExchanges.KorbitAdapter do
 
   alias CryptoExchanges.CryptoCurrency
 
-  def coinlist do
+  def get_currencies do
     [
       %CryptoCurrency{symbol: "BCH"},
       %CryptoCurrency{symbol: "BTC"},

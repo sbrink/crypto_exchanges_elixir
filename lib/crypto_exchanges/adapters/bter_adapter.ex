@@ -11,8 +11,8 @@ defmodule CryptoExchanges.BterAdapter do
 
   alias CryptoExchanges.CryptoCurrency
 
-  def coinlist do
-    api_coinlist()
+  def get_currencies do
+    api_get_currencies()
     |> get_in(["data"])
     |> Enum.map(&transform_bter_currency/1)
     |> Enum.uniq_by(&(&1.symbol))
@@ -27,7 +27,7 @@ defmodule CryptoExchanges.BterAdapter do
 
   # Private functions
   @url "http://data.bter.com/api2/1/marketlist"
-  defp api_coinlist do
+  defp api_get_currencies do
     HTTPoison.get!(@url).body
     |> Poison.decode!
   end

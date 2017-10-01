@@ -11,7 +11,7 @@ defmodule CryptoExchanges.KrakenAdapter do
 
   alias CryptoExchanges.CryptoCurrency
 
-  def coinlist do
+  def get_currencies do
     api_public_assets()
     |> get_in(["result"])
     |> Enum.map(&transform_kraken_currency/1)

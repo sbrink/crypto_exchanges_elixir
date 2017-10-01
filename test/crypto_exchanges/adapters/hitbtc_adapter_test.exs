@@ -3,10 +3,10 @@ defmodule CryptoExchanges.HitbtcAdapterTest do
 
   alias CryptoExchanges.HitbtcAdapter
 
-  describe "#coinlist" do
+  describe "#get_currencies" do
     test "get the list" do
-      use_cassette "hitbtc#coinlist" do
-        assert HitbtcAdapter.coinlist |> List.first == %CryptoExchanges.CryptoCurrency{active: true, symbol: "BCN"}
+      use_cassette "hitbtc#get_currencies" do
+        assert HitbtcAdapter.get_currencies |> List.first == %CryptoExchanges.CryptoCurrency{active: true, symbol: "BCN"}
       end
     end
   end

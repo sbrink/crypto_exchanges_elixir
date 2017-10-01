@@ -3,9 +3,9 @@ defmodule CryptoExchanges.KorbitAdapterTest do
 
   alias CryptoExchanges.KorbitAdapter
 
-  describe "#coinlist" do
+  describe "#get_currencies" do
     test "get the list" do
-      assert KorbitAdapter.coinlist() |> List.first == %CryptoExchanges.CryptoCurrency{active: true, symbol: "BCH"}
+      assert KorbitAdapter.get_currencies() |> List.first == %CryptoExchanges.CryptoCurrency{active: true, symbol: "BCH"}
     end
   end
 end

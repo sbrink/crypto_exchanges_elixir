@@ -11,11 +11,11 @@
     "response": {
       "body": "[{\"id\":\"BTC\",\"name\":\"Bitcoin\",\"min_size\":\"0.00000001\"},{\"id\":\"EUR\",\"name\":\"Euro\",\"min_size\":\"0.01000000\"},{\"id\":\"LTC\",\"name\":\"Litecoin\",\"min_size\":\"0.00000001\"},{\"id\":\"GBP\",\"name\":\"British Pound\",\"min_size\":\"0.01000000\"},{\"id\":\"USD\",\"name\":\"United States Dollar\",\"min_size\":\"0.01000000\"},{\"id\":\"ETH\",\"name\":\"Ether\",\"min_size\":\"0.00000001\"}]",
       "headers": {
-        "Date": "Sun, 01 Oct 2017 09:55:31 GMT",
+        "Date": "Sun, 01 Oct 2017 18:33:52 GMT",
         "Content-Type": "application/json; charset=utf-8",
         "Content-Length": "340",
         "Connection": "keep-alive",
-        "Set-Cookie": "__cfduid=dc797c4f04d72c3cc6a74ffd9c35f9ce91506851731; expires=Mon, 01-Oct-18 09:55:31 GMT; path=/; domain=.gdax.com; HttpOnly",
+        "Set-Cookie": "__cfduid=d2f0bf053fbd72f440e70b7dd23468c541506882831; expires=Mon, 01-Oct-18 18:33:51 GMT; path=/; domain=.gdax.com; HttpOnly",
         "Access-Control-Allow-Headers": "Content-Type, Accept, cb-session",
         "Access-Control-Allow-Methods": "GET,POST,DELETE,PUT",
         "Access-Control-Allow-Origin": "*",
@@ -26,7 +26,7 @@
         "Strict-Transport-Security": "max-age=15552000; includeSubDomains; preload",
         "X-Content-Type-Options": "nosniff",
         "Server": "cloudflare-nginx",
-        "CF-RAY": "3a6e8bf96c180f63-FRA"
+        "CF-RAY": "3a718341b9e263eb-FRA"
       },
       "status_code": 200,
       "type": "ok"

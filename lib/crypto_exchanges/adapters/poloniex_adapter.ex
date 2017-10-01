@@ -11,7 +11,7 @@ defmodule CryptoExchanges.PoloniexAdapter do
 
   alias CryptoExchanges.CryptoCurrency
 
-  def coinlist do
+  def get_currencies do
     api_get_markets()
     |> Enum.map(&transform_poloniex_currency/1)
   end

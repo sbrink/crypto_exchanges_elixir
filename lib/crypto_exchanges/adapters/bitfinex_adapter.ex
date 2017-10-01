@@ -11,7 +11,7 @@ defmodule CryptoExchanges.BitfinexAdapter do
 
   alias CryptoExchanges.CryptoCurrency
 
-  def coinlist do
+  def get_currencies do
     api_get_symbols_details()
     |> Enum.map(&transform_bitfinex_currency/1)
     |> List.flatten

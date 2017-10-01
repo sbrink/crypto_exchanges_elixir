@@ -11,7 +11,7 @@
     "response": {
       "body": "[\"btcusd\",\"ethbtc\",\"ethusd\"]",
       "headers": {
-        "Date": "Sun, 01 Oct 2017 14:04:39 GMT",
+        "Date": "Sun, 01 Oct 2017 18:33:54 GMT",
         "Content-Type": "application/json",
         "Content-Length": "28",
         "Connection": "keep-alive",

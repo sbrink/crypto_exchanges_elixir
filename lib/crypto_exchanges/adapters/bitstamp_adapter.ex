@@ -11,7 +11,7 @@ defmodule CryptoExchanges.BitstampAdapter do
 
   alias CryptoExchanges.CryptoCurrency
 
-  def coinlist do
+  def get_currencies do
     [
       %CryptoCurrency{symbol: "BTC"},
       %CryptoCurrency{symbol: "LTC"},

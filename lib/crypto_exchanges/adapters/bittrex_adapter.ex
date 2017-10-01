@@ -11,7 +11,7 @@ defmodule CryptoExchanges.BittrexAdapter do
 
   alias CryptoExchanges.CryptoCurrency
 
-  def coinlist do
+  def get_currencies do
     api_get_markets()
     |> get_in(["result"])
     |> Enum.map(&transform_bittrex_currency/1)

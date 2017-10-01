@@ -3,10 +3,10 @@ defmodule CryptoExchanges.KrakenAdapterTest do
 
   alias CryptoExchanges.KrakenAdapter
 
-  describe "#coinlist" do
+  describe "#get_currencies" do
     test "get the list" do
-      use_cassette "kraken#coinlist" do
-        assert KrakenAdapter.coinlist |> List.first == %CryptoExchanges.CryptoCurrency{active: true, symbol: "BCH"}
+      use_cassette "kraken#get_currencies" do
+        assert KrakenAdapter.get_currencies |> List.first == %CryptoExchanges.CryptoCurrency{active: true, symbol: "BCH"}
       end
     end
   end

@@ -3,10 +3,10 @@ defmodule CryptoExchanges.BterAdapterTest do
 
   alias CryptoExchanges.BterAdapter
 
-  describe "#coinlist" do
+  describe "#get_currencies" do
     test "get the list" do
-      use_cassette "bter#coinlist" do
-        assert BterAdapter.coinlist() |> List.first == %CryptoExchanges.CryptoCurrency{active: true, symbol: "ETH"}
+      use_cassette "bter#get_currencies" do
+        assert BterAdapter.get_currencies() |> List.first == %CryptoExchanges.CryptoCurrency{active: true, symbol: "ETH"}
       end
     end
   end

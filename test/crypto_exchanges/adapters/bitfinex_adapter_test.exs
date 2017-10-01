@@ -3,10 +3,10 @@ defmodule CryptoExchanges.BitfinexAdapterTest do
 
   alias CryptoExchanges.BitfinexAdapter
 
-  describe "#coinlist" do
+  describe "#get_currencies" do
     test "get the list" do
-      use_cassette "bitfinex#coinlist" do
-        assert BitfinexAdapter.coinlist |> List.first == %CryptoExchanges.CryptoCurrency{active: true, symbol: "BTC"}
+      use_cassette "bitfinex#get_currencies" do
+        assert BitfinexAdapter.get_currencies |> List.first == %CryptoExchanges.CryptoCurrency{active: true, symbol: "BTC"}
       end
     end
   end

@@ -3,10 +3,10 @@ defmodule CryptoExchanges.BitstampAdapterTest do
 
   alias CryptoExchanges.BitstampAdapter
 
-  describe "#coinlist" do
+  describe "#get_currencies" do
     test "get the list" do
-      use_cassette "bitstamp#coinlist" do
-        assert BitstampAdapter.coinlist() |> List.first == %CryptoExchanges.CryptoCurrency{active: true, symbol: "BTC"}
+      use_cassette "bitstamp#get_currencies" do
+        assert BitstampAdapter.get_currencies() |> List.first == %CryptoExchanges.CryptoCurrency{active: true, symbol: "BTC"}
       end
     end
   end
