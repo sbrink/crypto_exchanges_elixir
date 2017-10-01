@@ -8,7 +8,12 @@ defmodule CryptoExchanges.Mixfile do
       elixir: "~> 1.5",
       start_permanent: Mix.env == :prod,
       deps: deps(),
+      test_coverage: [tool: ExCoveralls],
       preferred_cli_env: [
+        "coveralls": :test,
+        "coveralls.detail": :test,
+        "coveralls.post": :test,
+        "coveralls.html": :test,
         "vcr": :test,
         "vcr.delete": :test,
         "vcr.check": :test,
@@ -28,6 +33,7 @@ defmodule CryptoExchanges.Mixfile do
   defp deps do
     [
       {:credo, ">= 0.0.0", only: [:dev, :test]},
+      {:excoveralls, "~> 0.7", only: :test},
       {:exvcr, "~> 0.9", only: :test},
       {:httpoison, ">= 0.0.0"},
       {:mix_test_watch, "~> 0.3", only: :dev, runtime: false},
