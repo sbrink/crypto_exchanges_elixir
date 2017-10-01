@@ -8,6 +8,7 @@ defmodule CryptoExchanges.Mixfile do
       elixir: "~> 1.5",
       start_permanent: Mix.env == :prod,
       deps: deps(),
+      package: package(),
       test_coverage: [tool: ExCoveralls],
       preferred_cli_env: [
         "coveralls": :test,
@@ -38,6 +39,14 @@ defmodule CryptoExchanges.Mixfile do
       {:httpoison, ">= 0.0.0"},
       {:mix_test_watch, "~> 0.3", only: :dev, runtime: false},
       {:poison, ">= 0.0.0"}
+    ]
+  end
+
+  defp package do
+    [
+      maintainers: ["Sascha Brink"],
+      licenses: ["MIT"],
+      links: %{"GitHub" => "https://github.com/sbrink/crypto_exchanges_elixir"}
     ]
   end
 end
