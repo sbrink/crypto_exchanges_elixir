@@ -10,4 +10,5 @@ env:
   - MIX_ENV=test
 
 script:
+  - mix credo
   - mix coveralls.travis
