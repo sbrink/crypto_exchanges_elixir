@@ -3,6 +3,7 @@
 [![license](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/sbrink/crypto_exchanges_elixir/blob/master/LICENSE)
 [![Build Status](https://travis-ci.org/sbrink/crypto_exchanges_elixir.svg?branch=master)](https://travis-ci.org/sbrink/crypto_exchanges_elixir)
 [![Coverage Status](https://coveralls.io/repos/github/sbrink/crypto_exchanges_elixir/badge.svg?branch=master)](https://coveralls.io/github/sbrink/crypto_exchanges_elixir?branch=master)
+[![Hex.pm](https://img.shields.io/hexpm/v/crypto_exchanges.svg)]()
 
 ## Creating a new adapter
 
