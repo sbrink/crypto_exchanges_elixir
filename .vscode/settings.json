@@ -6,11 +6,13 @@
     "_build": true,
     ".mix_tasks": true,
     ".vscode": true,
-    "deps": true
+    "deps": true,
+    "doc": true
   },
   "search.exclude": {
     "priv/templates": true,
-    "deps": true
+    "test/support/vcr_cassettes": true,
+    "cover": true
   },
   "editor.tabSize": 2,
   "editor.trimAutoWhitespace": true,
