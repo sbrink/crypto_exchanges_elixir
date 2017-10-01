@@ -6,7 +6,7 @@ defmodule CryptoExchanges.HitbtcAdapterTest do
 
     describe "#coinlist" do
         test "get the list" do
-            use_cassette "hitbtc#getmarkets" do
+            use_cassette "hitbtc#coinlist" do
                 assert HitbtcAdapter.coinlist |> List.first == %CryptoExchanges.CryptoCurrency{active: true, symbol: "BCN"}
             end
         end

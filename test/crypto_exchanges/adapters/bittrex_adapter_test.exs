@@ -6,7 +6,7 @@ defmodule CryptoExchanges.BittrexAdapterTest do
 
   describe "#coinlist" do
     test "get the list" do
-      use_cassette "bittrex#getmarkets" do
+      use_cassette "bittrex#coinlist" do
         assert BittrexAdapter.coinlist |> List.first == %CryptoExchanges.CryptoCurrency{active: true, symbol: "LTC"}
       end
     end

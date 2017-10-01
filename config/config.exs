@@ -33,3 +33,7 @@ if Mix.env == :dev do
   config :mix_test_watch,
     clear: true, tasks: ["test --stale", "credo"]
 end
+
+config :exvcr, [
+  vcr_cassette_library_dir: "test/support/vcr_cassettes",
+]
