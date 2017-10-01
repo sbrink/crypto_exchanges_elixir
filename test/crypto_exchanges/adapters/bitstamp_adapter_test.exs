@@ -1,6 +1,5 @@
 defmodule CryptoExchanges.BitstampAdapterTest do
-  use ExUnit.Case
-  use ExVCR.Mock, adapter: ExVCR.Adapter.Hackney
+  use CryptoExchanges.AdapterCase
 
   alias CryptoExchanges.BitstampAdapter
 
