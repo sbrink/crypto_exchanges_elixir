@@ -5,7 +5,7 @@ defmodule CryptoExchanges.HitbtcAdapter do
   Homepage: https://hitbtc.com/
   API Docs: https://hitbtc.com/api
 
-  Country: -
+  Country: UK
   """
   @behaviour CryptoExchanges.Adapter
 
