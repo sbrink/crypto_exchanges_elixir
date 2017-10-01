@@ -1,6 +1,7 @@
-# CryptoExchanges
+# crypto_exchanges elixir
 
-**TODO: Add description**
+[![license](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/sbrink/crypto_exchanges_elixir/blob/master/LICENSE)
+[![Build Status](https://travis-ci.org/sbrink/crypto_exchanges_elixir.svg?branch=master)](https://travis-ci.org/sbrink/crypto_exchanges_elixir)
 
 ## Creating a new adapter
 
@@ -25,3 +26,6 @@ Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_do
 and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
 be found at [https://hexdocs.pm/crypto_exchanges](https://hexdocs.pm/crypto_exchanges).
 
+## License
+
+MIT © Sascha Brink
