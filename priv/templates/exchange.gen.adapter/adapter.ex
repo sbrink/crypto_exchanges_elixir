@@ -2,10 +2,10 @@ defmodule CryptoExchanges.<%= scoped %>Adapter do
   @moduledoc """
   An Adapter for <%= scoped %>
 
-  Homepage: https://example.com/
-  API Docs: https://example.com/api
+  Homepage: https://example.com/ TODO
+  API Docs: https://example.com/api TODO
 
-  Country: Unknown
+  Country: TODO
   """
   @behaviour CryptoExchanges.Adapter
 
@@ -16,7 +16,7 @@ defmodule CryptoExchanges.<%= scoped %>Adapter do
   end
 
   # Private functions
-  @url "https://example.com/api"
+  @url "https://example.com/api" # TODO
   defp api_coinlist do
     HTTPoison.get!(@url).body
     |> Poison.decode!

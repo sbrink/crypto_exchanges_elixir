@@ -1,0 +1,24 @@
+[
+  {
+    "request": {
+      "body": "",
+      "headers": [],
+      "method": "get",
+      "options": [],
+      "request_body": "",
+      "url": "https://api.gemini.com/v1/symbols"
+    },
+    "response": {
+      "body": "[\"btcusd\",\"ethbtc\",\"ethusd\"]",
+      "headers": {
+        "Date": "Sun, 01 Oct 2017 14:04:39 GMT",
+        "Content-Type": "application/json",
+        "Content-Length": "28",
+        "Connection": "keep-alive",
+        "Server": "nginx"
+      },
+      "status_code": 200,
+      "type": "ok"
+    }
+  }
+]
