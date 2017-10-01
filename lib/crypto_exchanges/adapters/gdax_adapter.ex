@@ -3,7 +3,7 @@ defmodule CryptoExchanges.GdaxAdapter do
   An Adapter for Gdax
 
   Homepage: https://www.gdax.com/
-  API Docs: https://api.gdax.com/currencies
+  API Docs: https://docs.gdax.com/
 
   Country: Unknown
   """
