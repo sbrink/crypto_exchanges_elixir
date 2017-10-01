@@ -4,7 +4,8 @@ defmodule CryptoExchanges.Mixfile do
   def project do
     [
       app: :crypto_exchanges,
-      version: "0.1.0",
+      source_url: "https://github.com/sbrink/crypto_exchanges_elixir",
+      version: "0.2.0",
       elixir: "~> 1.5",
       elixirc_paths: elixirc_paths(Mix.env),
       start_permanent: Mix.env == :prod,
@@ -39,7 +40,7 @@ defmodule CryptoExchanges.Mixfile do
   defp deps do
     [
       {:credo, ">= 0.0.0", only: [:dev, :test]},
-      {:ex_doc, ">= 0.0.0", only: :dev},
+      {:ex_doc, ">= 0.0.0", only: :dev, runtime: false},
       {:excoveralls, "~> 0.7", only: :test},
       {:exvcr, "~> 0.9", only: :test},
       {:httpoison, ">= 0.0.0"},
@@ -48,7 +49,7 @@ defmodule CryptoExchanges.Mixfile do
     ]
   end
 
-  defp description() do
+  defp description do
     "A unified api for crypto exchanges."
   end
 
