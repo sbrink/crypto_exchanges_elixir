@@ -8,6 +8,7 @@ defmodule CryptoExchanges.Mixfile do
       elixir: "~> 1.5",
       start_permanent: Mix.env == :prod,
       deps: deps(),
+      description: description(),
       package: package(),
       test_coverage: [tool: ExCoveralls],
       preferred_cli_env: [
@@ -34,12 +35,17 @@ defmodule CryptoExchanges.Mixfile do
   defp deps do
     [
       {:credo, ">= 0.0.0", only: [:dev, :test]},
+      {:ex_doc, ">= 0.0.0", only: :dev},
       {:excoveralls, "~> 0.7", only: :test},
       {:exvcr, "~> 0.9", only: :test},
       {:httpoison, ">= 0.0.0"},
       {:mix_test_watch, "~> 0.3", only: :dev, runtime: false},
       {:poison, ">= 0.0.0"}
     ]
+  end
+
+  defp description() do
+    "A unified api for crypto exchanges."
   end
 
   defp package do
