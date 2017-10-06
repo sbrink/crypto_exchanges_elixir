@@ -5,7 +5,7 @@ defmodule CryptoExchanges.BinanceAdapterTest do
 
   describe "#get_currencies" do
     test "get the list" do
-      assert BinanceAdapter.get_currencies() |> List.first == %CryptoExchanges.CryptoCurrency{active: true, symbol: "BTC"}
+      assert BinanceAdapter.get_currencies() |> List.first == %CryptoExchanges.Schema.CryptoCurrency{active: true, symbol: "BTC"}
     end
   end
 end

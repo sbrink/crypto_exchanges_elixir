@@ -9,7 +9,7 @@ defmodule CryptoExchanges.BitstampAdapter do
   """
   @behaviour CryptoExchanges.Adapter
 
-  alias CryptoExchanges.CryptoCurrency
+  alias CryptoExchanges.Schema.CryptoCurrency
 
   def get_currencies do
     [

@@ -5,7 +5,7 @@ defmodule CryptoExchanges.BitstampAdapterTest do
 
   describe "#get_currencies" do
     test "get the list" do
-      assert BitstampAdapter.get_currencies() |> List.first == %CryptoExchanges.CryptoCurrency{active: true, symbol: "BTC"}
+      assert BitstampAdapter.get_currencies() |> List.first == %CryptoExchanges.Schema.CryptoCurrency{active: true, symbol: "BTC"}
     end
   end
 end

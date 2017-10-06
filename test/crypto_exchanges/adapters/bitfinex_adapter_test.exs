@@ -6,7 +6,7 @@ defmodule CryptoExchanges.BitfinexAdapterTest do
   describe "#get_currencies" do
     test "get the list" do
       use_cassette "bitfinex#get_currencies" do
-        assert BitfinexAdapter.get_currencies |> List.first == %CryptoExchanges.CryptoCurrency{active: true, symbol: "BTC"}
+        assert BitfinexAdapter.get_currencies |> List.first == %CryptoExchanges.Schema.CryptoCurrency{active: true, symbol: "BTC"}
       end
     end
   end

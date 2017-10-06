@@ -9,7 +9,7 @@ defmodule CryptoExchanges.GdaxAdapter do
   """
   @behaviour CryptoExchanges.Adapter
 
-  alias CryptoExchanges.CryptoCurrency
+  alias CryptoExchanges.Schema.CryptoCurrency
 
   def get_currencies do
     api_get_currencies()

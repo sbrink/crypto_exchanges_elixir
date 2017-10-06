@@ -5,7 +5,7 @@ defmodule CryptoExchanges.KorbitAdapterTest do
 
   describe "#get_currencies" do
     test "get the list" do
-      assert KorbitAdapter.get_currencies() |> List.first == %CryptoExchanges.CryptoCurrency{active: true, symbol: "BCH"}
+      assert KorbitAdapter.get_currencies() |> List.first == %CryptoExchanges.Schema.CryptoCurrency{active: true, symbol: "BCH"}
     end
   end
 end

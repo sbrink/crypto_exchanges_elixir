@@ -1,4 +1,4 @@
-defmodule CryptoExchanges.CryptoCurrency do
+defmodule CryptoExchanges.Schema.CryptoCurrency do
   @moduledoc """
   Stores information about a currency
   """
