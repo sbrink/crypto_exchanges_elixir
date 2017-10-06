@@ -10,6 +10,7 @@ defmodule CryptoExchanges.BittrexAdapter do
   @behaviour CryptoExchanges.Adapter
 
   alias CryptoExchanges.Schema.CryptoCurrency
+  alias CryptoExchanges.Schema.CryptoMarket
 
   def get_currencies do
     api_get_markets()
@@ -20,8 +21,23 @@ defmodule CryptoExchanges.BittrexAdapter do
 
   def transform_bittrex_currency(bittrex_currency) do
     %CryptoCurrency{
-      active: true,
+      active: bittrex_currency["IsActive"],
       symbol: bittrex_currency["MarketCurrency"]
+    }
+  end
+
+  def get_markets do
+    api_get_markets()
+    |> get_in(["result"])
+    |> Enum.map(&transform_bittrex_market/1)
+  end
+
+  def transform_bittrex_market(bittrex_currency) do
+    %CryptoMarket{
+      active: bittrex_currency["IsActive"],
+      symbol: bittrex_currency["MarketCurrency"],
+      base_symbol: bittrex_currency["BaseCurrency"],
+      name: bittrex_currency["MarketName"]
     }
   end
 

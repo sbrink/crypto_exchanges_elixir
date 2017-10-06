@@ -10,4 +10,12 @@ defmodule CryptoExchanges.BittrexAdapterTest do
       end
     end
   end
+
+  describe "#get_markets" do
+    test "get the list" do
+      use_cassette "bittrex#get_markets" do
+        assert BittrexAdapter.get_markets |> List.first == %CryptoExchanges.Schema.CryptoMarket{active: true, symbol: "LTC", base_symbol: "BTC", name: "BTC-LTC"}
+      end
+    end
+  end
 end
