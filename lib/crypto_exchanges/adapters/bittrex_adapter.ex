@@ -69,10 +69,18 @@ defmodule CryptoExchanges.BittrexAdapter do
   end
 
   @url "https://bittrex.com/Api/v2.0/pub/market/GetTicks"
-  defp api_get_ticks(symbol1, symbol2, _interval, from) do
-    params = "marketName=#{symbol1}-#{symbol2}&tickInterval=thirtyMin&_=#{from}"
+  defp api_get_ticks(symbol1, symbol2, interval, from) do
+    params = "marketName=#{symbol1}-#{symbol2}&tickInterval=#{map_interval(interval)}&_=#{from}"
     HTTPoison.get!("#{@url}?#{params}").body
     |> Poison.decode!
     |> get_in(["result"])
   end
+
+  def supported_intervals, do: [1, 5, 30, 60, 1440]
+
+  defp map_interval(1), do: "oneMin"
+  defp map_interval(5), do: "fiveMin"
+  defp map_interval(30), do: "thirtyMin"
+  defp map_interval(60), do: "hour"
+  defp map_interval(1440), do: "day"
 end
