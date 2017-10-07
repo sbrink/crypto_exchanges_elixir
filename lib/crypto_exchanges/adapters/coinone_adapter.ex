@@ -7,9 +7,7 @@ defmodule CryptoExchanges.CoinoneAdapter do
 
   Country: Korea
   """
-  @behaviour CryptoExchanges.Adapter
-
-  alias CryptoExchanges.Schema.CryptoCurrency
+  use CryptoExchanges.Adapter
 
   def get_currencies do
     [

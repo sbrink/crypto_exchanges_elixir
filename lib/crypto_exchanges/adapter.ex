@@ -5,4 +5,14 @@ defmodule CryptoExchanges.Adapter do
   @callback get_currencies() :: any
 
   # @callback get_markets() :: any
+
+  defmacro __using__(_) do
+    quote do
+      @behaviour CryptoExchanges.Adapter
+
+      alias CryptoExchanges.Schema.CryptoCurrency
+      alias CryptoExchanges.Schema.CryptoMarket
+      alias CryptoExchanges.Schema.CryptoCandle
+    end
+  end
 end

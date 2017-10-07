@@ -7,9 +7,7 @@ defmodule CryptoExchanges.KrakenAdapter do
 
   Country: USA
   """
-  @behaviour CryptoExchanges.Adapter
-
-  alias CryptoExchanges.Schema.CryptoCurrency
+  use CryptoExchanges.Adapter
 
   def get_currencies do
     api_public_assets()

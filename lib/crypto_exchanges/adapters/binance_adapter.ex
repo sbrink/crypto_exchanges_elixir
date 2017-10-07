@@ -7,9 +7,7 @@ defmodule CryptoExchanges.BinanceAdapter do
 
   Country: China
   """
-  @behaviour CryptoExchanges.Adapter
-
-  alias CryptoExchanges.Schema.CryptoCurrency
+  use CryptoExchanges.Adapter
 
   def get_currencies do
     [

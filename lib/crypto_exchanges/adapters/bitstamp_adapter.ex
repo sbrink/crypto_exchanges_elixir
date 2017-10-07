@@ -7,9 +7,7 @@ defmodule CryptoExchanges.BitstampAdapter do
 
   Country: UK
   """
-  @behaviour CryptoExchanges.Adapter
-
-  alias CryptoExchanges.Schema.CryptoCurrency
+  use CryptoExchanges.Adapter
 
   def get_currencies do
     [

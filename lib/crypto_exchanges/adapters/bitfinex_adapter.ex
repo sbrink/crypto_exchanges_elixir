@@ -7,9 +7,7 @@ defmodule CryptoExchanges.BitfinexAdapter do
 
   Country: China
   """
-  @behaviour CryptoExchanges.Adapter
-
-  alias CryptoExchanges.Schema.CryptoCurrency
+  use CryptoExchanges.Adapter
 
   def get_currencies do
     api_get_symbols_details()

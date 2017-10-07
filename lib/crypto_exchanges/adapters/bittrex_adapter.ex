@@ -7,11 +7,7 @@ defmodule CryptoExchanges.BittrexAdapter do
 
   Country: USA
   """
-  @behaviour CryptoExchanges.Adapter
-
-  alias CryptoExchanges.Schema.CryptoCurrency
-  alias CryptoExchanges.Schema.CryptoMarket
-  alias CryptoExchanges.Schema.CryptoCandle
+  use CryptoExchanges.Adapter
 
   def get_currencies do
     api_get_markets()
