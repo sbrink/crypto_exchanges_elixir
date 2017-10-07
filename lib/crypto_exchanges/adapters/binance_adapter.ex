@@ -1,13 +1,15 @@
 defmodule CryptoExchanges.BinanceAdapter do
   @moduledoc """
   An Adapter for Binance
-
-  Homepage: https://www.binance.com/
-  API Docs: https://www.binance.com/restapipub.html
-
-  Country: China
   """
   use CryptoExchanges.Adapter
+
+  def get_info, do: %CryptoExchange{
+    name: "Binance",
+    homepage_url: "https://www.binance.com/",
+    api_docs_url: "https://www.binance.com/restapipub.html",
+    country: "China"
+  }
 
   def get_currencies do
     [

@@ -1,13 +1,15 @@
 defmodule CryptoExchanges.BittrexAdapter do
   @moduledoc """
   An Adapter for the Bittrex Exchange
-
-  Homepage: https://bittrex.com/
-  API Docs: https://bittrex.com/home/api
-
-  Country: USA
   """
   use CryptoExchanges.Adapter
+
+  def get_info, do: %CryptoExchange{
+    name: "Bittrex",
+    homepage_url: "https://bittrex.com/",
+    api_docs_url: "https://bittrex.com/home/api",
+    country: "USA"
+  }
 
   def get_currencies do
     api_get_markets()

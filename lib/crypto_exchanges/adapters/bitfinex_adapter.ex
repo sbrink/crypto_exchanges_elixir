@@ -1,13 +1,15 @@
 defmodule CryptoExchanges.BitfinexAdapter do
   @moduledoc """
   An Adapter for the Bitfinex Exchange
-
-  Homepage: https://www.bitfinex.com/
-  API Docs: https://docs.bitfinex.com/docs
-
-  Country: China
   """
   use CryptoExchanges.Adapter
+
+  def get_info, do: %CryptoExchange{
+    name: "Bitfinex",
+    homepage_url: "https://www.bitfinex.com/",
+    api_docs_url: "https://docs.bitfinex.com/docs",
+    country: "China"
+  }
 
   def get_currencies do
     api_get_symbols_details()

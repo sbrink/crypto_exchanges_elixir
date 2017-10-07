@@ -1,13 +1,15 @@
 defmodule CryptoExchanges.BterAdapter do
   @moduledoc """
   An Adapter for Bter
-
-  Homepage: https://bter.com/
-  API Docs: https://bter.com/api2
-
-  Country: Unknown
   """
   use CryptoExchanges.Adapter
+
+  def get_info, do: %CryptoExchange{
+    name: "Bter",
+    homepage_url: "https://bter.com/",
+    api_docs_url: "https://bter.com/api2",
+    country: "Unknown"
+  }
 
   def get_currencies do
     api_get_currencies()

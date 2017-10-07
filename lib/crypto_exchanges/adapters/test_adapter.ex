@@ -4,6 +4,13 @@ defmodule CryptoExchanges.TestAdapter do
   """
   use CryptoExchanges.Adapter
 
+  def get_info, do: %CryptoExchange{
+    name: "Test",
+    homepage_url: "https://example.com/",
+    api_docs_url: "https://example.com/api/",
+    country: "World"
+  }
+
   def get_currencies do
     [
       %CryptoCurrency{symbol: "BTC"},

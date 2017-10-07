@@ -1,13 +1,15 @@
 defmodule CryptoExchanges.PoloniexAdapter do
   @moduledoc """
   An Adapter for the Poloniex Exchange
-
-  Homepage: https://poloniex.com/
-  API Docs: https://poloniex.com/support/api/
-
-  Country: USA
   """
   use CryptoExchanges.Adapter
+
+  def get_info, do: %CryptoExchange{
+    name: "Poloniex",
+    homepage_url: "https://poloniex.com/",
+    api_docs_url: "https://poloniex.com/support/api/",
+    country: "USA"
+  }
 
   def get_currencies do
     api_get_markets()

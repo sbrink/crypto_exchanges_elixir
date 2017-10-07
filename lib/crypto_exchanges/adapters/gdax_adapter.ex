@@ -1,13 +1,15 @@
 defmodule CryptoExchanges.GdaxAdapter do
   @moduledoc """
   An Adapter for Gdax
-
-  Homepage: https://www.gdax.com/
-  API Docs: https://docs.gdax.com/
-
-  Country: Unknown
   """
   use CryptoExchanges.Adapter
+
+  def get_info, do: %CryptoExchange{
+    name: "Gdax",
+    homepage_url: "https://www.gdax.com/",
+    api_docs_url: "https://docs.gdax.com/",
+    country: "Unknown"
+  }
 
   def get_currencies do
     api_get_currencies()

@@ -1,13 +1,15 @@
 defmodule CryptoExchanges.HitbtcAdapter do
   @moduledoc """
   An Adapter for the Hitbtc Exchange
-
-  Homepage: https://hitbtc.com/
-  API Docs: https://hitbtc.com/api
-
-  Country: UK
   """
   use CryptoExchanges.Adapter
+
+  def get_info, do: %CryptoExchange{
+    name: "Hitbtc",
+    homepage_url: "https://hitbtc.com/",
+    api_docs_url: "https://hitbtc.com/api",
+    country: "UK"
+  }
 
   def get_currencies do
     api_get_markets()

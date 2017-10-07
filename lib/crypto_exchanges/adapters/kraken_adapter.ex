@@ -1,13 +1,15 @@
 defmodule CryptoExchanges.KrakenAdapter do
   @moduledoc """
   An Adapter for the Kraken Exchange
-
-  Homepage: https://www.kraken.com/
-  API Docs: https://www.kraken.com/en-us/help/api
-
-  Country: USA
   """
   use CryptoExchanges.Adapter
+
+  def get_info, do: %CryptoExchange{
+    name: "Kraken",
+    homepage_url: "https://www.kraken.com/",
+    api_docs_url: "https://www.kraken.com/en-us/help/api",
+    country: "USA"
+  }
 
   def get_currencies do
     api_public_assets()

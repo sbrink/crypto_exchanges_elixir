@@ -3,6 +3,13 @@ defmodule CryptoExchanges.BittrexAdapterTest do
 
   alias CryptoExchanges.BittrexAdapter
 
+  describe "#get_info" do
+    test "get the list" do
+      info = BittrexAdapter.get_info()
+      assert info.__struct__ == CryptoExchanges.Schema.CryptoExchange
+    end
+  end
+
   describe "#get_currencies" do
     test "get the list" do
       use_cassette "bittrex#get_currencies" do

@@ -1,13 +1,15 @@
 defmodule CryptoExchanges.BitstampAdapter do
   @moduledoc """
   An Adapter for Bitstamp
-
-  Homepage: https://www.bitstamp.net/
-  API Docs: https://www.bitstamp.net/api/
-
-  Country: UK
   """
   use CryptoExchanges.Adapter
+
+  def get_info, do: %CryptoExchange{
+    name: "Bitstamp",
+    homepage_url: "https://www.bitstamp.net/",
+    api_docs_url: "https://www.bitstamp.net/api/",
+    country: "UK"
+  }
 
   def get_currencies do
     [

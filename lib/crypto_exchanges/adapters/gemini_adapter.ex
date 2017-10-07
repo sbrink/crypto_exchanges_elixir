@@ -1,13 +1,15 @@
 defmodule CryptoExchanges.GeminiAdapter do
   @moduledoc """
   An Adapter for Gemini
-
-  Homepage: https://gemini.com/
-  API Docs: https://docs.gemini.com/rest-api/
-
-  Country: USA
   """
   use CryptoExchanges.Adapter
+
+  def get_info, do: %CryptoExchange{
+    name: "Gemini",
+    homepage_url: "https://gemini.com/",
+    api_docs_url: "https://docs.gemini.com/rest-api/",
+    country: "USA"
+  }
 
   def get_currencies do
     api_get_currencies()
