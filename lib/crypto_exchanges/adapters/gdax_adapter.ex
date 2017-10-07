@@ -8,7 +8,8 @@ defmodule CryptoExchanges.GdaxAdapter do
     name: "Gdax",
     homepage_url: "https://www.gdax.com/",
     api_docs_url: "https://docs.gdax.com/",
-    country: "Unknown"
+    country: "Unknown",
+    intervals: []
   }
 
   def get_currencies do

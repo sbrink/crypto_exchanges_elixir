@@ -8,7 +8,8 @@ defmodule CryptoExchanges.BterAdapter do
     name: "Bter",
     homepage_url: "https://bter.com/",
     api_docs_url: "https://bter.com/api2",
-    country: "Unknown"
+    country: "Unknown",
+    intervals: []
   }
 
   def get_currencies do

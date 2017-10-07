@@ -8,7 +8,8 @@ defmodule CryptoExchanges.KorbitAdapter do
     name: "Korbit",
     homepage_url: "https://www.korbit.co.kr/",
     api_docs_url: "https://apidocs.korbit.co.kr/",
-    country: "Korea"
+    country: "Korea",
+    intervals: []
   }
 
   def get_currencies do

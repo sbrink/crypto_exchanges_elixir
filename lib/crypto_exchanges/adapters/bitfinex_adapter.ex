@@ -8,7 +8,8 @@ defmodule CryptoExchanges.BitfinexAdapter do
     name: "Bitfinex",
     homepage_url: "https://www.bitfinex.com/",
     api_docs_url: "https://docs.bitfinex.com/docs",
-    country: "China"
+    country: "China",
+    intervals: []
   }
 
   def get_currencies do

@@ -8,7 +8,8 @@ defmodule CryptoExchanges.CoinoneAdapter do
     name: "Coinone",
     homepage_url: "https://coinone.co.kr/",
     api_docs_url: "http://doc.coinone.co.kr/",
-    country: "Korea"
+    country: "Korea",
+    intervals: []
   }
 
   def get_currencies do

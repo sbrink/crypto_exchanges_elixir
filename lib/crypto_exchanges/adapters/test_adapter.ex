@@ -8,7 +8,8 @@ defmodule CryptoExchanges.TestAdapter do
     name: "Test",
     homepage_url: "https://example.com/",
     api_docs_url: "https://example.com/api/",
-    country: "World"
+    country: "World",
+    intervals: []
   }
 
   def get_currencies do

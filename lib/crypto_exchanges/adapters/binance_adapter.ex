@@ -8,7 +8,8 @@ defmodule CryptoExchanges.BinanceAdapter do
     name: "Binance",
     homepage_url: "https://www.binance.com/",
     api_docs_url: "https://www.binance.com/restapipub.html",
-    country: "China"
+    country: "China",
+    intervals: []
   }
 
   def get_currencies do

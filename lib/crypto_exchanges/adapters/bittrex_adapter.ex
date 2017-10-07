@@ -8,7 +8,8 @@ defmodule CryptoExchanges.BittrexAdapter do
     name: "Bittrex",
     homepage_url: "https://bittrex.com/",
     api_docs_url: "https://bittrex.com/home/api",
-    country: "USA"
+    country: "USA",
+    intervals: [1, 5, 30, 60, 1440]
   }
 
   def get_currencies do
@@ -68,17 +69,15 @@ defmodule CryptoExchanges.BittrexAdapter do
 
   @url "https://bittrex.com/Api/v2.0/pub/market/GetTicks"
   defp api_get_ticks(symbol1, symbol2, interval, from) do
-    params = "marketName=#{symbol1}-#{symbol2}&tickInterval=#{map_interval(interval)}&_=#{from}"
+    params = "marketName=#{symbol1}-#{symbol2}&tickInterval=#{map_interval_param(interval)}&_=#{from}"
     HTTPoison.get!("#{@url}?#{params}").body
     |> Poison.decode!
     |> get_in(["result"])
   end
 
-  def supported_intervals, do: [1, 5, 30, 60, 1440]
-
-  defp map_interval(1), do: "oneMin"
-  defp map_interval(5), do: "fiveMin"
-  defp map_interval(30), do: "thirtyMin"
-  defp map_interval(60), do: "hour"
-  defp map_interval(1440), do: "day"
+  defp map_interval_param(1), do: "oneMin"
+  defp map_interval_param(5), do: "fiveMin"
+  defp map_interval_param(30), do: "thirtyMin"
+  defp map_interval_param(60), do: "hour"
+  defp map_interval_param(1440), do: "day"
 end

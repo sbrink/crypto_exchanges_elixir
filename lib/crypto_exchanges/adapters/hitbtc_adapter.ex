@@ -8,7 +8,8 @@ defmodule CryptoExchanges.HitbtcAdapter do
     name: "Hitbtc",
     homepage_url: "https://hitbtc.com/",
     api_docs_url: "https://hitbtc.com/api",
-    country: "UK"
+    country: "UK",
+    intervals: []
   }
 
   def get_currencies do

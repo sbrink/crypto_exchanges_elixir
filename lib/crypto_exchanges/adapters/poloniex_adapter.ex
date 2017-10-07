@@ -8,7 +8,8 @@ defmodule CryptoExchanges.PoloniexAdapter do
     name: "Poloniex",
     homepage_url: "https://poloniex.com/",
     api_docs_url: "https://poloniex.com/support/api/",
-    country: "USA"
+    country: "USA",
+    intervals: []
   }
 
   def get_currencies do

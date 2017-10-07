@@ -8,7 +8,8 @@ defmodule CryptoExchanges.BitstampAdapter do
     name: "Bitstamp",
     homepage_url: "https://www.bitstamp.net/",
     api_docs_url: "https://www.bitstamp.net/api/",
-    country: "UK"
+    country: "UK",
+    intervals: []
   }
 
   def get_currencies do

@@ -8,7 +8,8 @@ defmodule CryptoExchanges.KrakenAdapter do
     name: "Kraken",
     homepage_url: "https://www.kraken.com/",
     api_docs_url: "https://www.kraken.com/en-us/help/api",
-    country: "USA"
+    country: "USA",
+    intervals: []
   }
 
   def get_currencies do
