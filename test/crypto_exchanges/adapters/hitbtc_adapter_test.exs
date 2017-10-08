@@ -1,11 +1,11 @@
 defmodule CryptoExchanges.HitbtcAdapterTest do
   use CryptoExchanges.AdapterCase
 
-  alias CryptoExchanges.HitbtcAdapter
+  @adapter CryptoExchanges.HitbtcAdapter
 
   describe "#get_info" do
     test "returns an info struct" do
-      info = HitbtcAdapter.get_info()
+      info = @adapter.get_info()
 
       assert info.__struct__ == CryptoExchange
       assert info.name
@@ -19,7 +19,7 @@ defmodule CryptoExchanges.HitbtcAdapterTest do
   describe "#get_currencies" do
     test "get the list" do
       use_cassette "hitbtc#get_currencies" do
-        assert HitbtcAdapter.get_currencies |> List.first == %CryptoExchanges.Schema.CryptoCurrency{active: true, symbol: "BCN"}
+        assert @adapter.get_currencies |> List.first == %CryptoExchanges.Schema.CryptoCurrency{active: true, symbol: "BCN"}
       end
     end
   end

@@ -1,25 +1,18 @@
 defmodule CryptoExchanges.PoloniexAdapterTest do
   use CryptoExchanges.AdapterCase
 
-  alias CryptoExchanges.PoloniexAdapter
+  @adapter CryptoExchanges.PoloniexAdapter
 
   describe "#get_info" do
     test "returns an info struct" do
-      info = PoloniexAdapter.get_info()
-
-      assert info.__struct__ == CryptoExchange
-      assert info.name
-      assert info.homepage_url
-      assert info.api_docs_url
-      assert info.country
-      assert is_list(info.intervals)
+      assert_exchange_info @adapter.get_info()
     end
   end
 
   describe "#get_currencies" do
     test "get the list" do
       use_cassette "poloniex#get_currencies" do
-        assert PoloniexAdapter.get_currencies |> List.first == %CryptoExchanges.Schema.CryptoCurrency{active: false, symbol: "CNOTE"}
+        assert @adapter.get_currencies |> List.first == %CryptoExchanges.Schema.CryptoCurrency{active: false, symbol: "CNOTE"}
       end
     end
   end

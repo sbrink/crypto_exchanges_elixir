@@ -1,6 +1,6 @@
-defmodule CryptoExchanges.BinanceAdapterTest do
+defmodule CryptoExchanges.TestAdapterTest do
   use CryptoExchanges.AdapterCase
-  @adapter CryptoExchanges.BinanceAdapter
+  @adapter CryptoExchanges.TestAdapter
 
   describe "#get_info" do
     test "returns an info struct" do
@@ -9,7 +9,7 @@ defmodule CryptoExchanges.BinanceAdapterTest do
   end
 
   describe "#get_currencies" do
-    test "get the list" do
+    test "gets the list" do
       currencies = @adapter.get_currencies()
 
       assert is_list(currencies)

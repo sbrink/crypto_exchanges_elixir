@@ -1,25 +1,17 @@
 defmodule CryptoExchanges.BittrexAdapterTest do
   use CryptoExchanges.AdapterCase
-
-  alias CryptoExchanges.BittrexAdapter
+  @adapter CryptoExchanges.BittrexAdapter
 
   describe "#get_info" do
     test "returns an info struct" do
-      info = BittrexAdapter.get_info()
-
-      assert info.__struct__ == CryptoExchange
-      assert info.name
-      assert info.homepage_url
-      assert info.api_docs_url
-      assert info.country
-      assert is_list(info.intervals)
+      assert_exchange_info @adapter.get_info()
     end
   end
 
   describe "#get_currencies" do
     test "get the list" do
       use_cassette "bittrex#get_currencies" do
-        assert BittrexAdapter.get_currencies |> List.first == %CryptoExchanges.Schema.CryptoCurrency{active: true, symbol: "LTC"}
+        assert @adapter.get_currencies |> List.first == %CryptoCurrency{active: true, symbol: "LTC"}
       end
     end
   end
@@ -27,7 +19,7 @@ defmodule CryptoExchanges.BittrexAdapterTest do
   describe "#get_markets" do
     test "get the list" do
       use_cassette "bittrex#get_markets" do
-        assert BittrexAdapter.get_markets |> List.first == %CryptoExchanges.Schema.CryptoMarket{active: true, symbol: "LTC", base_symbol: "BTC", name: "BTC-LTC"}
+        assert @adapter.get_markets |> List.first == %CryptoExchanges.Schema.CryptoMarket{active: true, symbol: "LTC", base_symbol: "BTC", name: "BTC-LTC"}
       end
     end
   end
@@ -38,7 +30,7 @@ defmodule CryptoExchanges.BittrexAdapterTest do
         {:ok, datetime, 0} = DateTime.from_iso8601("2017-08-28 14:30:00Z")
         # datetime = "blub"
 
-        assert BittrexAdapter.get_candles("BTC", "ETH", 30, 1507378575615) |> List.first ==
+        assert @adapter.get_candles("BTC", "ETH", 30, 1507378575615) |> List.first ==
           %CryptoExchanges.Schema.CryptoCandle{close: 0.07996,
              high: 0.08019086, low: 0.07950001, open: 0.07959001,
              time: datetime, volume: 144.62875528}
