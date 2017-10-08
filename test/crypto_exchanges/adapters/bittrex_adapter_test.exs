@@ -4,9 +4,15 @@ defmodule CryptoExchanges.BittrexAdapterTest do
   alias CryptoExchanges.BittrexAdapter
 
   describe "#get_info" do
-    test "get the list" do
+    test "returns an info struct" do
       info = BittrexAdapter.get_info()
-      assert info.__struct__ == CryptoExchanges.Schema.CryptoExchange
+
+      assert info.__struct__ == CryptoExchange
+      assert info.name
+      assert info.homepage_url
+      assert info.api_docs_url
+      assert info.country
+      assert is_list(info.intervals)
     end
   end
 

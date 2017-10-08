@@ -9,6 +9,9 @@ defmodule CryptoExchanges.AdapterCase do
   using do
     quote do
       use ExVCR.Mock, adapter: ExVCR.Adapter.Hackney
+
+      alias CryptoExchanges.Schema.CryptoExchange
+      alias CryptoExchanges.Schema.CryptoCurrency
     end
   end
 end
